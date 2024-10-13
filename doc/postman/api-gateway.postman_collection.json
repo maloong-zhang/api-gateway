@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "386f0deb-e29e-4d91-a5f0-d5b0998442ad",
+		"name": "api-gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25849147"
+	},
+	"item": [
+		{
+			"name": "直连sayHi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"str\": \"10001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7397/wg/activity/sayHi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7397",
+					"path": [
+						"wg",
+						"activity",
+						"sayHi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "直连insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "uId",
+						"value": "maloong",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWxvb25nIiwiZXhwIjoxNzI5MzM1OTg5LCJpYXQiOjE3Mjg3MzExODksImtleSI6Im1hbG9vbmcifQ.f5l9L93mzJ30p0xvQHaMf-0NtvPc2Tig9wHHOm-LgH4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"maloong\",\n    \"uid\":\"10001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7397/wg/activity/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7397",
+					"path": [
+						"wg",
+						"activity",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "负载均衡连接sayHi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"str\": \"10001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.31.251:8090/10001/wg/activity/sayHi",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"31",
+						"251"
+					],
+					"port": "8090",
+					"path": [
+						"10001",
+						"wg",
+						"activity",
+						"sayHi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "负载均衡连接insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "uId",
+						"value": "maloong",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWxvb25nIiwiZXhwIjoxNzI5MzM1OTg5LCJpYXQiOjE3Mjg3MzExODksImtleSI6Im1hbG9vbmcifQ.f5l9L93mzJ30p0xvQHaMf-0NtvPc2Tig9wHHOm-LgH4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"maloong\",\n    \"uid\":\"10001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.31.251:8090/10001/wg/activity/insert",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"31",
+						"251"
+					],
+					"port": "8090",
+					"path": [
+						"10001",
+						"wg",
+						"activity",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

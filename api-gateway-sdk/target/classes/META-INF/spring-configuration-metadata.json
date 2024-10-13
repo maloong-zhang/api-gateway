@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "api-gateway-sdk",
+      "type": "ae.zerotone.gateway.sdk.config.GatewaySDKServiceProperties",
+      "sourceType": "ae.zerotone.gateway.sdk.config.GatewaySDKServiceProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "api-gateway-sdk.address",
+      "type": "java.lang.String",
+      "description": "网关注册中心地址",
+      "sourceType": "ae.zerotone.gateway.sdk.config.GatewaySDKServiceProperties"
+    },
+    {
+      "name": "api-gateway-sdk.enabled",
+      "type": "java.lang.Boolean",
+      "description": "程序是否启用",
+      "sourceType": "ae.zerotone.gateway.sdk.config.GatewaySDKServiceProperties"
+    },
+    {
+      "name": "api-gateway-sdk.system-id",
+      "type": "java.lang.String",
+      "description": "系统标识",
+      "sourceType": "ae.zerotone.gateway.sdk.config.GatewaySDKServiceProperties"
+    },
+    {
+      "name": "api-gateway-sdk.system-name",
+      "type": "java.lang.String",
+      "description": "系统名称",
+      "sourceType": "ae.zerotone.gateway.sdk.config.GatewaySDKServiceProperties"
+    },
+    {
+      "name": "api-gateway-sdk.system-registry",
+      "type": "java.lang.String",
+      "description": "RPC注册中心；zookeeper:\/\/127.0.0.1:2181",
+      "sourceType": "ae.zerotone.gateway.sdk.config.GatewaySDKServiceProperties"
+    }
+  ],
+  "hints": []
+}
